@@ -2,11 +2,14 @@
 // Addition of the necessary packages / libraries to all functions used by this program.
 #include <stdio.h>
 
-// Definition of the constant that dictates the amount of pieces of 
-// each product the shop has at the beginning.
+// Definition of the constant that dictates the amount of pieces of each product the shop has at the beginning.
 #define PRODUCT_CNT 2
 // Definition of the catalog's size.
 #define CATALOG_SIZE 20
+// Definition of the amount of clients the e-shop is going to serve.
+#define CLIENT_AMOUNT 5
+//Definition of the amount of orders each client is sending.
+#define ORDER_AMOUNT 10
 
 // Definition of the struct that defines the shop's products in the server. 
 typedef struct product {
