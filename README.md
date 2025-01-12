@@ -6,7 +6,6 @@ Moreover, it is a simulation of an e-shop selling laptops, where a CLIENT_AMOUNT
 The code contains comments in most parts to ensure easy understanding of it's functionality.
 <br></br>
 
-[InitialiseCatalog\(\)](/InitialiseCatalog.c)
 > [!WARNING]
 > If you wish to run this program on your local system as is, it is required to be using a UNIX system that supports make-file, and has the gcc compiler available. In any other case, you will have to modify the make-file to use the compiler of your choice, or compile all the files one by one manually.
 
