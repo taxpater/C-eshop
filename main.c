@@ -16,7 +16,7 @@ int main(void) {
   product catalog[CATALOG_SIZE];
   InitialiseCatalog(catalog);
   
-  while(i <= 5) {
+  while(i <= CLIENT_AMOUNT) {
     // The seed for the rand() function is changed with every new client to decrease the chances of multiple duplicate requests of the same product.
     srand(time(NULL));
     
@@ -49,8 +49,8 @@ int main(void) {
       close(fd2[1]);
       int productNo;
       
-      // The loop that allows the client to send the 10 orders to the server.
-      for (j = 1; j <= 10; j++) {
+      // The loop that allows the client to send the "ORDER_AMOUNT" orders to the server.
+      for (j = 1; j <= ORDER_AMOUNT; j++) {
         productNo = rand() % CATALOG_SIZE;
 
         write(fd1[1], &productNo, sizeof(int));
@@ -71,7 +71,7 @@ int main(void) {
       close(fd2[0]);
       
       // The loop that allows the server to handle the 10 orders that each client sends to it.
-      for (k = 1; k <= 10; k++) {
+      for (k = 1; k <= ORDER_AMOUNT; k++) {
         read(fd1[0], &response, sizeof(int));
 
         if (catalog[response].item_count >= 1) {
@@ -103,4 +103,3 @@ int main(void) {
   StatisticsReporting(catalog);
   return 0;
 }
-
