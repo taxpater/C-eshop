@@ -1,5 +1,5 @@
-<h1 align="center">c-eshop</h1>
-This repository contains the code for a project assigned as part of a prgramming lab, as a way to evaluate and enhance our knowledge in inter-process communication (IPC) utilising pipes, and the fork() function.
+<h1 align="center">c-eshop-pipes</h1>
+This repository contains the code for a project assigned as part of a prgramming lab, as a way to evaluate and enhance our knowledge in inter-process communication (IPC) utilising pipelines, and the fork() function.
 <br></br>
 Moreover, it is a simulation of an e-shop selling laptops, where a CLIENT_AMOUNT of different clients submit ORDER_AMOUNT of orders each to the server, waits for the server to process each one their orders as they are being submitted one by one, and then replies to them with whether the order was completed successfully or not, with CLIENT_AMOUNT & ORDER_AMOUNT being set in the func.c file. The product catalog is created automatically on each iteration through the InitialiseCatalog function, with each product having a set amount of stock, and the calalog having a set size defined by the PRODUCT_CNT & CATALOG_SIZE variables correspondigly. When all orders are processed, the server outputs a statistics report of the performance of each product, and of the shop as a whole.
 <br></br>
